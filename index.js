@@ -47,7 +47,7 @@ function readClip(interval) {
 
         })
         .catch(function (err) {
-            throw err;
+            eventEmitter.emit('error', err);
         });
 
 }
